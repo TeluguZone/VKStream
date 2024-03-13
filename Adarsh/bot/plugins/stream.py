@@ -17,7 +17,7 @@ db = Database(Var.DATABASE_URL, Var.name)
 
 MY_PASS = os.environ.get("MY_PASS", None)
 pass_dict = {}
-pass_db = Database(Var.DATABASE_URL, "ag_passwords")
+pass_db = Database(Var.DATABASE_URL, "VK")
 
 
 @StreamBot.on_message((filters.regex("login🔑") | filters.command("login")) , group=4)
@@ -59,7 +59,7 @@ async def private_receive_handler(c: Client, m: Message):
         await db.add_user(m.from_user.id)
         await c.send_message(
             Var.BIN_CHANNEL,
-            f"New User Joined! : \n\n Name : [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started Your Bot!!"
+            f"New User Joined! : \n\n Name : [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started Your VK_STREAM Bot!!"
         )
     if Var.UPDATES_CHANNEL != "None":
         try:
@@ -67,7 +67,7 @@ async def private_receive_handler(c: Client, m: Message):
             if user.status == "kicked":
                 await c.send_message(
                     chat_id=m.chat.id,
-                    text="You are banned!\n\n  **Contact Developer [Nobita](https://telegram.me/NobiDeveloperSupport) he will help you.**",
+                    text="You are banned!\n\n  **Contact Developer [Nobita](https://telegram.me/DAEMON990) he will help you.**",
                     
                     disable_web_page_preview=True
                 )
@@ -90,7 +90,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="**sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [ʙᴏss](https://telegram.me/NobiDeveloperr)**",
+                text="**sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [FATHER](https://telegram.me/DAEMON990)**",
                 
                 disable_web_page_preview=True)
             return
@@ -108,7 +108,7 @@ async def private_receive_handler(c: Client, m: Message):
 
 <b>⚠️ ᴛʜɪꜱ ʟɪɴᴋ ᴡɪʟʟ ᴇxᴘɪʀᴇ ᴀꜰᴛᴇʀ 𝟸𝟺 ʜᴏᴜʀꜱ</b>
 
-<b>❇️  ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @MovievillaYT</b>"""
+<b>❇️  ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @VKLEECH</b>"""
 
         await log_msg.reply_text(text=f"**ʀᴇǫᴜᴇꜱᴛᴇᴅ ʙʏ :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n**Stream ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True,  quote=True)
         await m.reply_text(
@@ -116,9 +116,9 @@ async def private_receive_handler(c: Client, m: Message):
             quote=True,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("🖥️  ꜱᴛʀᴇᴀᴍ  🖥️", url=stream_link),
-                 InlineKeyboardButton('📥  ᴅᴏᴡɴʟᴏᴀᴅ  📥', url=online_link)],
-                [InlineKeyboardButton('🎪  ꜱᴜʙꜱᴄʀɪʙᴇ ᴍʏ ʏᴛ ᴄʜᴀɴɴᴇʟ  🎪', url='https://youtube.com/@NobiDeveloper')]])
+                [InlineKeyboardButton("🖥️ VK ꜱᴛʀᴇᴀᴍ  🖥️", url=stream_link),
+                 InlineKeyboardButton('📥 VK ᴅᴏᴡɴʟᴏᴀᴅ  📥', url=online_link)],
+                [InlineKeyboardButton('🎪 VK OFFICIAL  🎪', url='https://t.me/+eBsZ7A1iWYw0ZmM9')]])
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
@@ -156,9 +156,9 @@ async def channel_receive_handler(bot, broadcast):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("🖥️  ꜱᴛʀᴇᴀᴍ  🖥️", url=stream_link),
-                     InlineKeyboardButton('📥  ᴅᴏᴡɴʟᴏᴀᴅ  📥', url=online_link)],
-                    [InlineKeyboardButton('🎪  ꜱᴜʙꜱᴄʀɪʙᴇ ᴍʏ ʏᴛ ᴄʜᴀɴɴᴇʟ  🎪', url='https://youtube.com/@NobiDeveloper')]
+                    [InlineKeyboardButton("🖥️ VK ꜱᴛʀᴇᴀᴍ  🖥️", url=stream_link),
+                     InlineKeyboardButton('📥 VK ᴅᴏᴡɴʟᴏᴀᴅ  📥', url=online_link)],
+                    [InlineKeyboardButton('🎪 VK OFFICIAL  🎪', url='https://t.me/+eBsZ7A1iWYw0ZmM9')]
                 ]
             )
         )
