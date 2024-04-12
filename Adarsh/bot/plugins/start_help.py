@@ -140,7 +140,7 @@ async def help_handler(bot, message):
             [
                 [InlineKeyboardButton("💁‍♂️ DEVELOPER", url="https://daemon990")],
                 [InlineKeyboardButton("💥 Our Movie Bot 1", url="https://t.me/TeluguZone_File1_sharing_bot")],
-                 [InlineKeyboardButton("💥 Our Movie Bot 1", url="https://t.me/Tony_FilesBot")]          
+                [InlineKeyboardButton("💥 Our Movie Bot 1", url="https://t.me/Tony_FilesBot")]          
             ]
         )
     )
